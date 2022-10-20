@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.0] - 2022-10-19
+### Added
+- A new `mode` parameter to the `dom.html()` method.
+  This parameter allows for more flexibility in the return type.
+- A new `util.HTML_MODE` enum for the new parameter.
+- Added tests for the new parameter.
+- Added static aliases to `NODE_TYPE`, `PARSE_TYPE`, and `HTML_MODE` to
+  the `Dom` class itself. No need to import `util` anymore.
+
 ## [1.1.0] - 2022-09-21
 ### Changed
 - If `window` parameter in the constructor is `undefined` or `null`,

@@ -2,9 +2,11 @@
  * Tests for parsing HTML/XML strings.
  */
 const Test = require('@lumjs/tests-dom');
-const PT = require('../lib/util').PARSE_TYPE;
+const Util = require('../lib/util');
+const PT = Util.PARSE_TYPE;
+const HM = Util.HTML_MODE;
 
-const plan = 20;
+const plan = 29;
 
 const t = Test.getTest({module, plan});
 
@@ -30,6 +32,21 @@ t.isElement(html, 'html() returns Element');
 t.is(html.tagName, 'SECTION', 'html() .tagName');
 t.is(html.id, 'main', 'html() .id');
 
+html = dom.html(FRAG_1, HM.AUTO_BODY);
+t.isElement(html, 'html(:AUTO_BODY) returns Element');
+t.is(html.tagName, 'SECTION', 'html(:AUTO_BODY) .tagName');
+
+html = dom.html(FRAG_1, HM.BODY);
+t.isElement(html, 'html(:BODY) returns Element');
+t.is(html.tagName, 'BODY', 'html(:BODY) .tagName');
+
+html = dom.html(FRAG_1, HM.HTML);
+t.isElement(html, 'html(:HTML) returns Element');
+t.is(html.tagName, 'HTML', 'html(:HTML) .tagName');
+
+html = dom.html(FRAG_1, HM.DOC);
+t.isDocument(html, 'html(:DOC) returns Document');
+
 xml = dom.xml(FRAG_1);
 t.isElement(xml, 'xml() returns Element');
 t.is(xml.tagName, 'section', 'xml() .tagName');
@@ -41,6 +58,10 @@ const FRAG_2 = '<p id="first">Hello</p><p id="second">world</p>';
 html = dom.html(FRAG_2);
 t.isHTMLCollection(html, 'html(:multiRoot) returns HTMLCollection');
 t.is(html.length, 2, 'html(:multiRoot) .length');
+
+html = dom.html(FRAG_2, HM.AUTO_BODY);
+t.isElement(html, 'html(:multiRoot, :AUTO_BODY) returns Element');
+t.is(html.tagName, 'BODY', 'html(:multiRoot, :AUTO_BODY) .tagName');
 
 xml = dom.xml(FRAG_2);
 t.isElement(xml, 'xml(:multiRoot) returns Element');
