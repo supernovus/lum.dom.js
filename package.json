@@ -1,6 +1,6 @@
 {
   "name": "@lumjs/dom",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "main": "lib/index.js",
   "exports":
   {
@@ -19,16 +19,16 @@
     "url": "https://github.com/supernovus/lum.dom.js.git"
   },
   "dependencies": {
-    "@lumjs/core": "^1.7.0"
+    "@lumjs/core": "^1.10.0"
   },
   "devDependencies":
   {
+    "@lumjs/tests": "^1.8.1",
     "@lumjs/tests-dom": "^1.0.0"
   },
   "scripts":
   {
-    "-TODO-1": "Use `lumtest` once its available",
-    "test": "prove -e node --ext js ./test",
+    "test": "lumtest.js",
     "build-docs": "jsdoc -c ./jsdoc.json"
   }
 }
