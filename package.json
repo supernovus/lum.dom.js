@@ -1,12 +1,13 @@
 {
   "name": "@lumjs/dom",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "main": "lib/index.js",
   "exports":
   {
     ".": "./lib/index.js",
     "./util": "./lib/util.js",
-    "./events": "./lib/events.js",
+    "./events": "./lib/events/index.js",
+    "./events/plugin": "./lib/events/plugin.js",
     "./extend": "./lib/extend.js",
     "./listcompiler": "./lib/listcompiler.js",
     "./query.js": "./lib/query.js",
