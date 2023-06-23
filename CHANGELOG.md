@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.4.0] - 2023-06-09
+### Added
+- `dom#whenReady(cb)` for `document:DOMContentLoaded` events.
+- `dom#whenWindowReady(cb)` for `window:load` events.
+- `dom#ready` accessor returns Promise for `whenReady()`.
+- `dom#windowReady` accessor returns Promise for `whenWindowReady()`.
+### Changed
+- Enhanced documentation in `events` and `events.Plugin` modules.
+
 ## [1.3.1] - 2023-06-05
 ### Fixed
 - Two copy-n-paste typo bugs in `extend.js`
@@ -36,7 +45,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release.
 
-[Unreleased]: https://github.com/supernovus/lum.dom.js/compare/v1.3.1...HEAD
+[Unreleased]: https://github.com/supernovus/lum.dom.js/compare/v1.4.0...HEAD
+[1.4.0]: https://github.com/supernovus/lum.dom.js/compare/v1.3.0...v1.3.1
 [1.3.1]: https://github.com/supernovus/lum.dom.js/compare/v1.3.0...v1.3.1
 [1.3.0]: https://github.com/supernovus/lum.dom.js/compare/v1.2.1...v1.3.0
 [1.2.1]: https://github.com/supernovus/lum.dom.js/compare/v1.2.0...v1.2.1
