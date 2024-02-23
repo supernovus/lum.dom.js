@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.5.0] - 2024-02-23
+### Changed
+- Refactored how delegated events are handled.
+- Noted my thoughts on the complexity in this library and its future.
+
 ## [1.4.0] - 2023-06-09
 ### Added
 - `dom#whenReady(cb)` for `document:DOMContentLoaded` events.
@@ -45,8 +50,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release.
 
-[Unreleased]: https://github.com/supernovus/lum.dom.js/compare/v1.4.0...HEAD
-[1.4.0]: https://github.com/supernovus/lum.dom.js/compare/v1.3.0...v1.3.1
+[Unreleased]: https://github.com/supernovus/lum.dom.js/compare/v1.5.0...HEAD
+[1.5.0]: https://github.com/supernovus/lum.dom.js/compare/v1.4.0...v1.5.0
+[1.4.0]: https://github.com/supernovus/lum.dom.js/compare/v1.3.1...v1.4.0
 [1.3.1]: https://github.com/supernovus/lum.dom.js/compare/v1.3.0...v1.3.1
 [1.3.0]: https://github.com/supernovus/lum.dom.js/compare/v1.2.1...v1.3.0
 [1.2.1]: https://github.com/supernovus/lum.dom.js/compare/v1.2.0...v1.2.1

@@ -36,6 +36,17 @@ A small set of DOM helpers wrapped in a minimalist core.
     convert `NodeList` results into `HTMLCollection` results when asked to.
   - Can be easily extended to add other DOM objects without constructors. 
 
+## Thoughts
+
+This might be overkill for simple web apps, and I'm thinking of writing a
+new more lightweight library, possibly using 
+[elemental.js](docs/v2-plans/elemental.js) as at least a starting point.
+I'll want to bring a few of the enhancements I've made, particularly in
+regards to delegated events into the new library.
+
+I won't get rid of this library as it has its place in testing, but I really
+think it's overly complicated for most simple uses.
+
 ## Official URLs
 
 This library can be found in two places:
