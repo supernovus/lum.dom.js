@@ -2,6 +2,29 @@
 
 A small set of DOM helpers wrapped in a minimalist core.
 
+## DEPRECATION NOTICE
+
+I think I over-engineered this library set to be too complicated.
+For the vast majority of browser-side code this was overkill and forced
+specific usage patterns.
+
+As such, I am working on a set of replacement libraries, starting with a
+fundamental `web-core` that runs natively in a browser environment.
+This new library allows a much wider variety of usage patterns, 
+making almost all features modular so you can pick which bits you want to 
+use and ignore the rest. As it is written to run directly in a browser,
+it doesn't integrate as smoothly with `jsdom` as this did, however I plan
+to make a couple different extension libraries to provide `jsdom` support in
+a couple different ways.
+
+Once the minimalist core and a few extensions are released, I plan to write 
+a new `web-tests` library that will either replace or supplement the 
+`tests-dom` package that used this library as its core.
+
+Then this library (and the version of `tests-dom` depending on it) will be
+retired from active development. It had a short life, but a lot of it will
+live on in `web-core` and its upcoming extensions.
+
 ## Features
 
 - Wraps a `window` object so it works in browser or Node.js with `jsdom`.
@@ -35,17 +58,6 @@ A small set of DOM helpers wrapped in a minimalist core.
   - Used by the `Query` library to build composite lists, and to
     convert `NodeList` results into `HTMLCollection` results when asked to.
   - Can be easily extended to add other DOM objects without constructors. 
-
-## Thoughts
-
-This might be overkill for simple web apps, and I'm thinking of writing a
-new more lightweight library, possibly using 
-[elemental.js](docs/v2-plans/elemental.js) as at least a starting point.
-I'll want to bring a few of the enhancements I've made, particularly in
-regards to delegated events into the new library.
-
-I won't get rid of this library as it has its place in testing, but I really
-think it's overly complicated for most simple uses.
 
 ## Official URLs
 
